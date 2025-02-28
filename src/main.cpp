@@ -3,14 +3,15 @@
 #include <Arduino.h>
 #include <FastLED.h>
 #include "font5x7.h"
-#include <WiFi.h>             // needed to connect to WiFi
-#include <WebServer.h>        // needed to create a simple webserver (make sure tools -> board is set to ESP32, otherwise you will get a "WebServer.h: No such file or directory" error)
-#include <WebSocketsServer.h> // needed for instant communication between client and server through Websockets
-#include <ArduinoJson.h>      // needed for JSON encapsulation (send multiple variables with one string)
+#include <WiFi.h>
+#include <WebServer.h>
+#include <WebSocketsServer.h>
+#include <ArduinoJson.h>
 #include "htlm.h"
+
 // SSID and password of Wifi connection:
-const char *ssid = "ASUS";
-const char *password = "Student2000";
+const char *ssid = "YOUR_SSID";
+const char *password = "YOUR_PASSWORD";
 
 void webSocketEvent(byte, WStype_t, uint8_t *, size_t);
 
@@ -18,8 +19,6 @@ volatile bool flagaodp = 0;
 char slowoodp[200];
 bool odw = 0;
 int opcja = 0;
-// The JSON library uses static memory, so this will need to be allocated:
-// -> in the video I used global variables for "doc_tx" and "doc_rx", however, I now changed this in the code to local variables instead "doc" -> Arduino documentation recomends to use local containers instead of global to prevent data corruption
 
 // Initialization of webserver and websocket
 WebServer server(80);                              // the server uses port 80 (standard port for websites
