@@ -2,7 +2,7 @@
 
 This is my attempt at making holographic dispaly witch adressable WS2812B-2020 LED's.
 
-![ezgif-14df54734885b0](https://github.com/user-attachments/assets/5349c831-f9af-4633-88b5-6017e6f15290)
+![ezgif-14df54734885b0](https://github.com/onikw/hol/blob/main/gifs/gif1.gif)
 
 
 The Hardware is a remix of project made by Mislav Stipić.
